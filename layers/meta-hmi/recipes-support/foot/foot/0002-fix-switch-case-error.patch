@@ -1,0 +1,12 @@
+diff --git a/wayland.c b/wayland.c
+index 4add34e3..bb441905 100644
+--- a/wayland.c
++++ b/wayland.c
+@@ -794,6 +794,7 @@ xdg_toplevel_configure(void *data, struct xdg_toplevel *xdg_toplevel,
+ #if defined(XDG_TOPLEVEL_STATE_SUSPENDED_SINCE_VERSION)
+         case XDG_TOPLEVEL_STATE_SUSPENDED:    is_suspended = true; break;
+ #endif
++        default: break;
+         }
+
+ #if defined(LOG_ENABLE_DBG) && LOG_ENABLE_DBG

@@ -1,0 +1,32 @@
+# Configure resolution and rotation for each display
+# output HDMI-A-1 resolution 1920x1080 transform 270
+# output HDMI-A-2 resolution 1920x1080 transform 270
+
+# Set background
+# output * bg #000000 solid_color
+
+# Set background
+# output * bg /usr/local/share/splashscreen/splash-90.png fill
+output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+
+# Hide sway-bar
+bar { mode invisible }
+default_border none
+
+# Bind each instance of the HMI application to appropriate display
+#assign [title="HMI-1"] output HDMI-A-1
+#assign [title="HMI-2"] output HDMI-A-2
+
+# Hide mouse cursor after 100ms inactivity
+seat seat0 hide_cursor 100
+
+# Bind each touchscreen to the corresponding display
+#input "usb:1-1.1:1.0" map_to_output "HDMI-A-1"
+#input "usb:1-1.2:1.0" map_to_output "HDMI-A-2"
+
+# Hide titlebar
+# for_window [app_id="hmi-service"] border none
+
+for_window [app_id="."] inhibit_idle fullscreen
+for_window [app_id="."] border none
+

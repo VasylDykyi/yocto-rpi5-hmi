@@ -1,0 +1,27 @@
+[Unit]
+Description=sway - SirCmpwn's Wayland window manager
+Documentation=man:sway(5)
+DefaultDependencies=no
+After=systemd-user-sessions.service
+Requires=systemd-user-sessions.service
+
+[Service]
+User=sway
+Group=sway
+WorkingDirectory=/home/sway
+PAMName=sway-autologin
+
+# A virtual terminal is needed.
+TTYPath=/dev/tty8
+TTYReset=yes
+TTYVHangup=yes
+TTYVTDisallocate=yes
+
+Type=simple
+ExecStartPre=/bin/sleep 2
+ExecStart=/usr/bin/sway
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
