@@ -6,6 +6,5 @@ LIC_FILES_CHKSUM = "file://${COREBASE}/meta/COPYING.MIT;md5=3da9cfbcb788c80a0384
 SDK_NAME = "hmi-sdk-qt6"
 SDK_VERSION = "1.0"
 SDK_TITLE = "HMI Qt6 SDK"
-SDK_VENDOR = "HMI"
 
 inherit populate_sdk populate_sdk_qt6_hmi

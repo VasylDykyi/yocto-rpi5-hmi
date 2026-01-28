@@ -1,12 +1,10 @@
-SUMMARY = "HMI system packages"
+SUMMARY = "HMI system runtime package set"
 
 LICENSE = "MIT"
 
-inherit packagegroup
-
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-PACKAGEGROUP_DISABLE_COMPLEMENTARY = "1"
+ALLOW_EMPTY:${PN} = "1"
 
 RDEPENDS:${PN} = " \
     sway \

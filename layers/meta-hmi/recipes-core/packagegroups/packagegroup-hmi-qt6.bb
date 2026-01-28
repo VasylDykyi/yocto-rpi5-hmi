@@ -1,8 +1,12 @@
 SUMMARY = "HMI Qt6 packages"
 
+LICENSE = "MIT"
+
 inherit packagegroup
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
+
+PACKAGEGROUP_DISABLE_COMPLEMENTARY = "1"
 
 RDEPENDS:${PN} = " \
     qtbase \
