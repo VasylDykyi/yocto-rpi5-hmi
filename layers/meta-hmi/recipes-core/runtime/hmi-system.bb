@@ -15,6 +15,7 @@ RDEPENDS:${PN} = " \
     grim \
     slurp \
     mc \
+    htop \
     nano \
     htop \
     x264 \
@@ -37,4 +38,7 @@ RDEPENDS:${PN} = " \
     mariadb-server \
     mariadb-client \
     curl \
+    e2fsprogs \
+    util-linux-sfdisk \
+    expand-rootfs \
 "

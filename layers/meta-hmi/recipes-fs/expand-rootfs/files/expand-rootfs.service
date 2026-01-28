@@ -1,0 +1,13 @@
+[Unit]
+Description=Auto expand rootfs
+DefaultDependencies=no
+After=local-fs.target
+Wants=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/root/scripts/expand-rootfs.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
