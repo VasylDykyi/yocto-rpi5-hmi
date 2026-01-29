@@ -8,7 +8,7 @@ SRC_URI = " \
     file://expand-rootfs.service \		
 "
 
-RDEPENDS:${PN} = "util-linux-sfdisk"
+RDEPENDS:${PN} = "util-linux-sfdisk e2fsprogs-resize2fs"
 
 inherit systemd
 

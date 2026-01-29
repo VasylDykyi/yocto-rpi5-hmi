@@ -5,9 +5,8 @@ After=local-fs.target
 Wants=local-fs.target
 
 [Service]
-Type=oneshot
+Type=simple
 ExecStart=/root/scripts/expand-rootfs.sh
-RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
