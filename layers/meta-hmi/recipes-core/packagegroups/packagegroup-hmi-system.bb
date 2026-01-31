@@ -39,7 +39,10 @@ RDEPENDS:${PN} = " \
     mariadb-server \
     mariadb-client \
     curl \
+	curlpp \
     e2fsprogs-resize2fs \
     util-linux-sfdisk \
     expand-rootfs \
+    glibc-utils \
+	localedef \
 "
