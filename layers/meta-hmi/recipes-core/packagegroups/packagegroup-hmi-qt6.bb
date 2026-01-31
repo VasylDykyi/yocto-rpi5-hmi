@@ -2,9 +2,9 @@ SUMMARY = "HMI Qt6 packages"
 
 LICENSE = "MIT"
 
-inherit packagegroup
+PACKAGE_ARCH = "${TUNE_PKGARCH}"
 
-PACKAGE_ARCH = "${MACHINE_ARCH}"
+inherit packagegroup
 
 PACKAGEGROUP_DISABLE_COMPLEMENTARY = "1"
 

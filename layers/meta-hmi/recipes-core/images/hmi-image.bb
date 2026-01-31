@@ -8,7 +8,7 @@ IMAGE_FEATURES += "debug-tweaks"
 IMAGE_FEATURES += "tools-debug"
 
 IMAGE_INSTALL += " \
-    hmi-system \
-    hmi-qt6 \
+    packagegroup-hmi-system \
+    packagegroup-hmi-qt6 \
 "
 

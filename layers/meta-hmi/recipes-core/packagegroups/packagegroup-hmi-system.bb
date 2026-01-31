@@ -2,11 +2,9 @@ SUMMARY = "HMI system packages"
 
 LICENSE = "MIT"
 
+PACKAGE_ARCH = "${TUNE_PKGARCH}"
+
 inherit packagegroup
-
-PACKAGE_ARCH = "${MACHINE_ARCH}"
-
-PACKAGEGROUP_DISABLE_COMPLEMENTARY = "1"
 
 RDEPENDS:${PN} = " \
     sway \
@@ -21,6 +19,8 @@ RDEPENDS:${PN} = " \
     htop \
     x264 \
     x265 \
+    rsync \
+    ninja \
     v4l-utils \
     gstreamer1.0 \
     gstreamer1.0-plugins-base \
@@ -39,4 +39,7 @@ RDEPENDS:${PN} = " \
     mariadb-server \
     mariadb-client \
     curl \
+    e2fsprogs-resize2fs \
+    util-linux-sfdisk \
+    expand-rootfs \
 "

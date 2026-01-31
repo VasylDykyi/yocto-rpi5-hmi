@@ -2,15 +2,15 @@ SUMMARY = "HMI system SDK development packages"
 
 LICENSE = "MIT"
 
+PACKAGE_ARCH = "${TUNE_PKGARCH}"
+
 inherit packagegroup
 
-PACKAGE_ARCH = ""
-
-PACKAGEGROUP_DISABLE_COMPLEMENTARY = "1"
+# PACKAGEGROUP_DISABLE_COMPLEMENTARY = "1"
 
 RDEPENDS:${PN} = " \
     libmysqlclient-dev \
-    mariadb-dev \
+    mariadb \
     \
     gstreamer1.0-dev \
     gstreamer1.0-plugins-base-dev \
@@ -19,6 +19,8 @@ RDEPENDS:${PN} = " \
     gstreamer1.0-plugins-ugly-dev \
     gstreamer1.0-libav-dev \
     \
-    libx264-dev \
-    libx265-dev \
+    x264-dev \
+    x265-dev \
+	\
+	curlpp-dev \
 "
