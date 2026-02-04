@@ -21,6 +21,9 @@ RDEPENDS:${PN} = " \
     x265 \
     rsync \
     ninja \
+    fonts-wvkbd \
+    fontconfig \
+    wvkbd \
     v4l-utils \
     gstreamer1.0 \
     gstreamer1.0-plugins-base \
@@ -39,10 +42,10 @@ RDEPENDS:${PN} = " \
     mariadb-server \
     mariadb-client \
     curl \
-	curlpp \
+    curlpp \
     e2fsprogs-resize2fs \
     util-linux-sfdisk \
     expand-rootfs \
     glibc-utils \
-	localedef \
+    localedef \
 "

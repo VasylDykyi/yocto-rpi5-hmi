@@ -22,6 +22,16 @@ do_install:append() {
         ${D}/home/sway/.config/sway/config
 }
 
+pkg_postinst:${PN}() {
+#!/bin/sh
+if [ -n "$D" ]; then
+    exit 0
+fi
+
+chown -R sway:sway /home/sway
+chmod -R 700 /home/sway
+}
+
 FILES:${PN} += "\
   /home \
   /home/sway \
